@@ -14,15 +14,12 @@ module.exports = function (agents) {
 
     //now we have all isolated agent objects set and we can start counting
     // their respective countries.
-    // let isolatedAgents = getIsolatedAgentsArray(agents);
-    // console.log("CHECK",isolatedAgents);
     const getIsolatedCountries = (isolatedAgents => {
         return isolatedAgents.reduce((accumulator, {country}) => {
-            // console.log(accumulator, country);
             accumulator[country] = accumulator[country] ? accumulator[country] + 1 : 1;
             return accumulator;
         }, {});
     });
-    // console.log(getIsolatedAgentsArray(agents));
+
     return getIsolatedCountries(getIsolatedAgentsArray(agents));
 };
