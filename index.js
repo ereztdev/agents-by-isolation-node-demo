@@ -15,9 +15,9 @@ app.get('/countries-by-isolation', (req, res) => {
         if (err) throw err;
         agentArray = JSON.parse(data);
         res.setHeader('Content-Type', 'application/json');
-        // res.send(JSON.stringify(obj, null, 3));
         res.send(isolatedCountries(agentArray));
-        res.end();//closing response flow for now, remove if we want to develop the async fs response further
+        //closing response flow for now, remove if we want to develop the async fs response further
+        res.end();
     });
 });
 

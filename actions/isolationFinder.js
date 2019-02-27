@@ -21,5 +21,23 @@ module.exports = function (agents) {
         }, {});
     });
 
-    return getIsolatedCountries(getIsolatedAgentsArray(agents));
+    //getting a set of isolated countries as paired object.
+    let countriesIsolationLevelObject = getIsolatedCountries(getIsolatedAgentsArray(agents));
+
+    //the highest number of isolation found in the object above
+    let maxIsolationFound = Math.max.apply(
+        null,
+        Object.keys(countriesIsolationLevelObject)
+            .map(function (x) {
+                return countriesIsolationLevelObject[x]
+            })
+    );
+
+    //getting the key (country name) for the max value found above.
+    let highestIsolatedCountry = Object.keys(countriesIsolationLevelObject)
+        .filter(function(x){
+            return countriesIsolationLevelObject[x] === maxIsolationFound;
+        });
+
+    return `The highest isolated country is ${highestIsolatedCountry}`;
 };
