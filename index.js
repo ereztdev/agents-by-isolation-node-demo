@@ -2,6 +2,10 @@ const express = require('express');
 const fs = require('fs');
 const app = express();
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
 const isolatedCountries = require('./actions/isolationFinder');
 
 app.get('/', (req, res) => {
@@ -19,6 +23,11 @@ app.get('/countries-by-isolation', (req, res) => {
         //closing response flow for now, remove if we want to develop the async fs response further
         res.end();
     });
+});
+
+app.post('/find-closest', (req, res) =>{
+    let address = req.body.address;
+    res.send(address)
 });
 
 app.listen(3000, () => console.log('here'));
