@@ -1,7 +1,6 @@
 const apiKey = '&key=' + process.env.GOOGLE_API_KEY;
 const axios = require('axios');
 const url = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=';
-let test = 'https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=ramat-gan|givatayim&destinations=32.085300,34.781769|32.055300,34.731769&key=AIzaSyDCUOtMU1M7xhc1NC6EYzTOanfGFjST5ds';
 
 
 module.exports = function (agents, origins) {
