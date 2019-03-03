@@ -5,9 +5,11 @@ Please follow the following steps:
 ## Project setup
 >This demo assumes you have the lates Node installed
  if not, [Download It](https://nodejs.org/dist/v10.15.2/node-v10.15.2-x64.msi).
+ 
 1. `git clone` this repo, or download it to your local folder.
 2. run ```npm install```
-3. run `nodemon index.js` 
+3. You'll need to setup your `.env` and include the key `GOOGLE_API_KEY=<your-key>`
+4. run `nodemon index.js` 
 >If all went good and nothing exploded, you now have a live server on  `http://localhost:3000`
 ####ENDPOINTS
 #####[countries-by-isolation](http://localhost:3000/countries-by-isolation)
