@@ -14,9 +14,19 @@ Please follow the following steps:
 ####ENDPOINTS
 #####[countries-by-isolation](http://localhost:3000/countries-by-isolation)
 Provides the most isolated country
+#####Header Keys
+- **`all:(bool)true`** - Will send all agents
+- **`all:null`** - Will send The highest isolated country
 #####[find-closest](http://localhost:3000/find-closest)
-Returns a JSON with the shortest and longest distances from 
+#####Body Keys (`x-www-form-urlencoded`)
+- **`target_location:(string)'city, country'`** - Returns shortest and longest distances from 
+
+- **`target_location:{null / erroneous / Error}`** - Error (`status:422`)
+
 ##Run this project
 >Please note that I am using port 3000 for back end.
+
 1. Run ```yarn serve```
+
+###Click Here for [-= Complementary Vue Project =-]()
 
