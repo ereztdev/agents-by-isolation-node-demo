@@ -1,6 +1,27 @@
 #Agents Isolation Finder - BE
 Hi, this is the back end demo.
 
+##Objectives
+**Part 1:** 
+Endpoint: GET /countries-by-isolation
+An isolated agent is defined as an agent that participated in a single mission.
+Implement an algorithm that finds the most isolated country (the country with the highest degree of isolation).
+For the sample input (see below) input:
+Brazil has 1 isolated agent (008) and 2 non-isolated agents (007, 005)
+Poland has 2 isolated agents (011, 013) and one non-isolated agent (005)
+Morocco has 3 isolated agents (002, 009, 003) and one non-isolated agent (007)
+
+So the result is Morocco with an isolation degree of 3.
+
+**Part 2:**
+
+Find the closest and farthest missions from a specific address 
+	(you can use Google API for this)
+
+Endpoint: POST /find-closest
+
+#[SAMPLE DATA](https://pastebin.com/zQEx4uKH)
+
 Please follow the following steps:
 ## Project setup
 >This demo assumes you have the lates Node installed
