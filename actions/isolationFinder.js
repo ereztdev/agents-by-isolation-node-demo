@@ -14,6 +14,11 @@ module.exports = function (agents) {
 
     //now we have all isolated agent objects set and we can start counting
     // their respective countries.
+    /**
+     * getIsolatedCountries will take the isolatedAgents object and reduce to return their
+     * respective countries
+     * @type {function(*): *}
+     */
     const getIsolatedCountries = (isolatedAgents => {
         return isolatedAgents.reduce((accumulator, {country}) => {
             accumulator[country] = accumulator[country] ? accumulator[country] + 1 : 1;
@@ -25,6 +30,7 @@ module.exports = function (agents) {
     let countriesIsolationLevelObject = getIsolatedCountries(getIsolatedAgentsArray(agents));
 
     //the highest number of isolation found in the object above
+    //so Math.max.apply - apply allows me to send Math.max array items
     let maxIsolationFound = Math.max.apply(
         null,
         Object.keys(countriesIsolationLevelObject)
