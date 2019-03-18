@@ -30,7 +30,7 @@ module.exports = function (agents) {
     let countriesIsolationLevelObject = getIsolatedCountries(getIsolatedAgentsArray(agents));
 
     //the highest number of isolation found in the object above
-    //so Math.max.apply - apply allows me to send Math.max array items
+    //so Math.max.apply - apply allows me to send Math.max array items as params
     let maxIsolationFound = Math.max.apply(
         null,
         Object.keys(countriesIsolationLevelObject)

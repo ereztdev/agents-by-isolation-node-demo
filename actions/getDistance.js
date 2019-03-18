@@ -24,7 +24,7 @@ module.exports = function (agents, origins) {
      * @returns {Promise<Array>}
      */
     const distancesResponse = async () => {
-        const distances = await getDistances()
+        const distances = await getDistances();
         let distanceMatrix = [];
 
         //parsing the GM response
@@ -46,10 +46,10 @@ module.exports = function (agents, origins) {
 
         //filtering min/max via Math Object for 2 distance type values
         let filteredMatrix = distanceMatrix.filter(entry => !isNaN(+Object.values(entry)[0]));
-        let max = Math.max.apply(Math, filteredMatrix.map(function (o) {
+        let max = Math.max.apply(null, filteredMatrix.map(function (o) {
             return Object.values(o);
         }));
-        let min = Math.min.apply(Math, filteredMatrix.map(function (o) {
+        let min = Math.min.apply(null, filteredMatrix.map(function (o) {
             return Object.values(o);
         }));
 
