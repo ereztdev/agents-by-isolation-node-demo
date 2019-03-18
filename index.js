@@ -40,7 +40,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/countries-by-isolation', async (req, res, next) => {
-  let all = req.headers.all;
+  let all = req.query.all;
   try {
     let data = await readFile('src/agents.json');
     let parsedData = JSON.parse(data);
