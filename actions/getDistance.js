@@ -7,16 +7,7 @@ module.exports = function (agents, origins) {
     let destinations = '&destinations=' + agents.map(agent => agent.address).join('|');
     let minMaxResponse = [];
 
-    //todo: use later if needed
-    // const thousands_separators = (num => {
-    //     var num_parts = num.toString().split(".");
-    //     num_parts[0] = num_parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-    //     return num_parts.join(".");
-    // });
-
-
     /**
-     * //todo: reusable, segregate.
      * The asynchronous call to google maps.
      * @returns {Promise<*>}
      */

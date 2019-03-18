@@ -15,10 +15,11 @@ const getDistance = require('./actions/getDistance');
 
 let agentArray = [];
 
-const getAgentArray = function () {
-  return 'yes';
-};
-
+/**
+ * Get any file Asynchronously
+ * @param path
+ * @returns {Promise<any>}
+ */
 const readFile = (path) => {
   return new Promise((resolve, reject) => {
     if (!path) {
@@ -32,6 +33,7 @@ const readFile = (path) => {
     });
   });
 };
+
 
 app.get('/', (req, res) => {
   res.send('root empty on purpose ("PONG")')
