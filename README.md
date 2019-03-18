@@ -35,11 +35,11 @@ Please follow the following steps:
 ####ENDPOINTS
 #####[countries-by-isolation](http://localhost:3000/countries-by-isolation)
 Provides the most isolated country
-#####Header Keys
+#####Params
 - **`all:(bool)true`** - Will send all agents
 - **`all:null`** - Will send The highest isolated country
 #####[find-closest](http://localhost:3000/find-closest)
-#####Body Keys (`x-www-form-urlencoded`)
+#####Params
 - **`target_location:(string)'city, country'`** - Returns shortest and longest distances from 
 
 - **`target_location:{null / erroneous / Error}`** - Error (`status:422`)
