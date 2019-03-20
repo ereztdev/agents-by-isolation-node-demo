@@ -3,7 +3,8 @@ Hi, this is the back end demo.
 
 ## Objectives
 **Part 1:** 
-Endpoint: GET /countries-by-isolation
+
+### __Endpoint: GET `/countries-by-isolation`__
 An isolated agent is defined as an agent that participated in a single mission.
 Implement an algorithm that finds the most isolated country (the country with the highest degree of isolation).
 For the sample input (see below) input:
@@ -15,10 +16,10 @@ So the result is Morocco with an isolation degree of 3.
 
 **Part 2:**
 
+### __Endpoint: POST `/find-closest`__
 Find the closest and farthest missions from a specific address 
 	(you can use Google API for this)
 
-Endpoint: POST /find-closest
 
 # [SAMPLE DATA](https://pastebin.com/zQEx4uKH)
 
